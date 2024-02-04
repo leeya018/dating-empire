@@ -36,7 +36,7 @@ const QuestionList = observer<QuestionListProps>(({ questionList }) => {
     )
   }
   return (
-    <ul>
+    <ul className="h-full overflow-auto">
       {getFilter().map((questionListItem: QuestionListItem, key: number) => (
         <li key={key}>
           <Accordion>

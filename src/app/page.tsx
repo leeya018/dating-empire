@@ -16,7 +16,7 @@ const HomePage = observer(() => {
   }, [])
 
   return (
-    <div>
+    <div className="h-[100vh]">
       <Title>Common questions</Title>
       <FilterInput
         onChange={(e) => filterStore.setFilter(e.target.value)}
