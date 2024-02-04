@@ -6,7 +6,9 @@ export type InputPropType = {
   type: string
   onChange: (e: any) => void
   value: any
-  placeHolder: string
+  placeholder?: string
   inputRef?: React.RefObject<HTMLInputElement>
   onKeyDown?: any
+  onBlur?: any
+  onFocus?: any
 }

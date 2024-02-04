@@ -7,9 +7,11 @@ const Input: FC<InputPropType> = ({
   className,
   onChange,
   value,
-  placeHolder,
+  placeholder,
   inputRef = null,
   onKeyDown = () => {},
+  onFocus = () => {},
+  onBlur = () => {},
 }) => {
   return (
     <input
@@ -18,9 +20,11 @@ const Input: FC<InputPropType> = ({
       name={name}
       onChange={onChange}
       value={value}
-      placeholder={placeHolder}
+      placeholder={placeholder}
       ref={inputRef}
       onKeyDown={onKeyDown}
+      onFocus={onFocus}
+      onBlur={onBlur}
     />
   )
 }

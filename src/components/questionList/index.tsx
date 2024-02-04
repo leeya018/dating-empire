@@ -5,7 +5,7 @@ import AccordionSummary from "@mui/material/AccordionSummary"
 import AccordionDetails from "@mui/material/AccordionDetails"
 import Typography from "@mui/material/Typography"
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward"
-import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown"
+import filterStore from "@/mobx/filterStore"
 
 type QuestionListItem = {
   question: string
@@ -15,9 +15,15 @@ type QuestionListProps = {
   questionList: QuestionListItem[]
 }
 const QuestionList = observer<QuestionListProps>(({ questionList }) => {
+  const getFilter = () => {
+    const search = filterStore.search
+    return questionList.filter((questionListItem) =>
+      questionListItem.question.includes(search)
+    )
+  }
   return (
     <ul>
-      {questionList.map((questionListItem: QuestionListItem, key: number) => (
+      {getFilter().map((questionListItem: QuestionListItem, key: number) => (
         <li key={key}>
           <Accordion>
             <AccordionSummary
