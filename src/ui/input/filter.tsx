@@ -12,7 +12,8 @@ const FilterInput: FC<FilterInputProps> = ({ ...rest }) => {
   return (
     <div
       className={`w-full flex items-center border-b-2  border-color-text-gray  
-  px-4 ${isFocused ? "ring-2 ring-color-blue" : ""}`}
+  px-4 `}
+      // px-4 ${isFocused ? "ring-2 ring-color-blue" : ""}`}
     >
       <FaMagnifyingGlass size={25} className="text-color-text-gray" />
       <Input
