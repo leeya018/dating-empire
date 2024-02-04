@@ -21,6 +21,20 @@ const QuestionList = observer<QuestionListProps>(({ questionList }) => {
       questionListItem.question.includes(search)
     )
   }
+
+  const getData = (dataStr: string) => {
+    return (
+      <div>
+        {dataStr.split("\n").map((str) => {
+          return (
+            <>
+              <div>{str} </div> <br />
+            </>
+          )
+        })}
+      </div>
+    )
+  }
   return (
     <ul>
       {getFilter().map((questionListItem: QuestionListItem, key: number) => (
@@ -36,7 +50,7 @@ const QuestionList = observer<QuestionListProps>(({ questionList }) => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{questionListItem.answer}</Typography>
+              <Typography>{getData(questionListItem.answer)}</Typography>
             </AccordionDetails>
           </Accordion>
         </li>
