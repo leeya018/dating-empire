@@ -4,6 +4,7 @@ import moment from "moment"
 export const NavNames = {
   home: "home",
   commonQuestions: "commonQuestions",
+  products: "products",
   login: "login",
 }
 

@@ -24,6 +24,7 @@ const Nav = observer(() => {
       <div>
         <NavItem name={`${NavNames.home}`} />
         <NavItem name={`${NavNames.commonQuestions}`} />
+        <NavItem name={`${NavNames.products}`} />
       </div>
       <div className="flex items-center justify-around gap-5 text-xl ">
         <div className="flex justify-center gap-3 items-center ">
