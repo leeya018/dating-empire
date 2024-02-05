@@ -10,7 +10,7 @@ const NavItem: FC<NavItemProps> = observer(({ name }) => {
     <Link
       className={`${
         name === navStore.nav ? "underline bg-color-purple" : ""
-      } cursor-pointer p-2 m-2 capitalize
+      } cursor-pointer font-bold text-color-black p-2 m-2 capitalize text-[16px]
         duration-200 hover:underline hover:bg-color-purple hover:bg-opacity-50`}
       href={`/${name}`}
       onClick={() => navStore.setNav(`${name}`)}

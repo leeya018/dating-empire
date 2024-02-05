@@ -12,33 +12,31 @@ const Nav = observer(() => {
     <div className="sticky w-full py-5 flex items-center justify-between ">
       <div className=" flex items-center  justify-around gap-5 text-xl font-bold">
         <div className="relative">
-          <div className="font-bold text-2xl  absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-            Golden List
-          </div>
           <Image
             alt="golden image"
             width={122}
             height={122}
-            className="rounded-lg "
-            src={"/images/golden.png"}
+            className="rounded-lg bg-center "
+            src={"/images/dating empire logo.jpg"}
           />
         </div>
+      </div>
+      <div>
         <NavItem name={`${NavNames.home}`} />
         <NavItem name={`${NavNames.commonQuestions}`} />
       </div>
       <div className="flex items-center justify-around gap-5 text-xl ">
-        <NavFilter />
         <div className="flex justify-center gap-3 items-center ">
-          <div className="font-semibold">{user?.displayName}</div>
+          <div className="font-semibold text-[16px]">{user?.displayName}</div>
 
           <Image
             alt="me image"
-            width={70}
-            height={70}
+            width={50}
+            height={50}
             className="rounded-full"
             src={user?.photoURL || ""}
           />
-          <button onClick={logOut}>logout</button>
+          {/* <button onClick={logOut}>logout</button> */}
         </div>
       </div>
     </div>
