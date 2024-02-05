@@ -1,6 +1,12 @@
 import { Timestamp } from "firebase/firestore"
 import moment from "moment"
 
+export const NavNames = {
+  home: "home",
+  commonQuestions: "commonQuestions",
+  login: "login",
+}
+
 export const modals = {
   addCategory: "addCategory",
   editCategory: "editCategory",

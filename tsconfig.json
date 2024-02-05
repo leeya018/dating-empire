@@ -32,7 +32,8 @@
     "src/ui/**/*.jsx",
     "src/mobx/**/*.js",
     "src/api/**/*.ts",
-    "src/context/*.jsx"
+    "src/context/*.jsx",
+    "src/data/*.json"
   ],
   "exclude": ["node_modules"]
 }
